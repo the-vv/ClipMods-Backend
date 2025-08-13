@@ -13,6 +13,7 @@ module.exports = [
             record.set('publicApprovalStatus', 'pending');
         }
         record.set('createdBy', user.id);
+        record.set('version', 1);
         return {
             status: true,
             message: "Record creation successful",
