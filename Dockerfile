@@ -1,8 +1,11 @@
-# Use the official Node.js image as the base image
+# Use the official Alpine image as the base image
 FROM alpine:latest
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
+
+# Install Node.js and npm
+RUN apk add --no-cache nodejs npm
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
