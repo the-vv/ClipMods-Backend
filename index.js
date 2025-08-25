@@ -4,7 +4,7 @@ const os = require('os');
 const platform = os.platform();
 
 let cmd = '';
-let args = ['serve'];
+let args = ['serve', '--http=0.0.0.0:8090'];
 
 if (platform === 'linux') {
     cmd = './pocketbase_l';
